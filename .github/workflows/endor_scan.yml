@@ -32,7 +32,7 @@ jobs:
         - name: Run endorctl
           uses: endorlabs/github-action@v1.1.2
           with:
-            namespace: "matt-demo-2"
+            namespace: "live-remediation"
             api: "https://api.endorlabs.com"
             enable_github_action_token: "true"
             enable_pr_comments: true
