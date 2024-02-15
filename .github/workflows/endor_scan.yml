@@ -38,6 +38,7 @@ jobs:
             enable_pr_comments: true
             github_token: ${{ secrets.GITHUB_TOKEN }}
             sarif_file: endor-labs.sarif
+            additional_args: --disable-phantom=false
             tags: "actor=${{ github.actor }},run-id=${{ github.run_id }}"
 
         - name: Upload SARIF to github
