@@ -32,14 +32,14 @@ jobs:
         - name: Run endorctl
           uses: endorlabs/github-action@v1.1.2
           with:
-            namespace: "live-remediation"
+            namespace: "matt-demo-2"
             api: "https://api.endorlabs.com"
             enable_github_action_token: "true"
-            #enable_pr_comments: true
-            pr: false
+            enable_pr_comments: true
+            pr: true
             github_token: ${{ secrets.GITHUB_TOKEN }}
             sarif_file: endor-labs.sarif
-            additional_args: --disable-phantom=false --bypass-host-check --pr
+            additional_args: --phantom-dependencies --bypass-host-check --pr
             tags: "actor=${{ github.actor }},run-id=${{ github.run_id }}"
 
         - name: Upload SARIF to github
