@@ -35,7 +35,8 @@ jobs:
             namespace: "live-remediation"
             api: "https://api.endorlabs.com"
             enable_github_action_token: "true"
-            enable_pr_comments: true
+            #enable_pr_comments: true
+            pr: false
             github_token: ${{ secrets.GITHUB_TOKEN }}
             sarif_file: endor-labs.sarif
             additional_args: --disable-phantom=false --bypass-host-check --pr
