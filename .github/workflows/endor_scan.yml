@@ -46,4 +46,10 @@ jobs:
           uses: github/codeql-action/upload-sarif@v3
           with:
             sarif_file: endor-labs.sarif
+
+        - name: Upload artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: endorlabs-sarif
+            path: endor-labs.sarif
             
